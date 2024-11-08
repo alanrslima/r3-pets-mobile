@@ -1,15 +1,12 @@
-import {FontSizeProps} from '../../../types/theme';
+import { FontSizeProps } from "../../../types/theme";
 
 export const fontSizes: FontSizeProps = {
-  text_xs: '12px',
-  text_sm: '14px',
-  text_md: '16px',
-  text_lg: '18px',
-  text_xl: '24px',
-  display_xs: '30px',
-  display_sm: '36px',
-  display_md: '48px',
-  display_lg: '60px',
-  display_xl: '72px',
-  display_2xl: '96px',
+  xs: "12px",
+  sm: "14px",
+  base: "16px",
+  lg: "18px",
+  xl: "20px",
+  "2xl": "24px",
+  "3xl": "30px",
+  "4xl": "36px",
 };

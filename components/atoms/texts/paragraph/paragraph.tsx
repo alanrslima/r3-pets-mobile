@@ -1,13 +1,18 @@
 import { ReactNode } from "react";
-import { TitleSizes } from "../texts";
 import { ParagraphText } from "./paragraph.styles";
+import { ColorProps, FontSizeProps } from "@/types";
 
 type ParagraphProps = {
-  size?: TitleSizes;
+  size?: keyof FontSizeProps;
   children?: ReactNode;
   numberOfLines?: number;
+  color?: keyof ColorProps;
 };
 
-export function Paragraph({ size, ...rest }: ParagraphProps) {
-  return <ParagraphText {...rest} />;
+export function Paragraph({
+  size = "sm",
+  color = "onSurfaceSecondary",
+  ...rest
+}: ParagraphProps) {
+  return <ParagraphText $size={size} $color={color} {...rest} />;
 }

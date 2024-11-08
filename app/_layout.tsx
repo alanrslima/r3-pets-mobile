@@ -12,7 +12,7 @@ import { useEffect } from "react";
 import "react-native-reanimated";
 
 import { useColorScheme } from "@/hooks/useColorScheme";
-import { lightTheme } from "@/styles";
+import { darkTheme, lightTheme } from "@/styles";
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
@@ -39,7 +39,9 @@ export default function RootLayout() {
 
   return (
     <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
-      <StyledThemeProvider theme={lightTheme}>
+      <StyledThemeProvider
+        theme={colorScheme === "dark" ? darkTheme : lightTheme}
+      >
         <Stack screenOptions={{ headerShown: false }}>
           {/* <Stack.Screen name="index" /> */}
           <Stack.Screen name="home" />

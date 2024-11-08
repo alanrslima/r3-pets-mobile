@@ -2,6 +2,8 @@ export type ColorProps = {
   white: string;
   black: string;
 
+  border: string;
+
   background: string;
   onBackgroundPrimary: string;
   onBackgroundSecondary: string;

@@ -1,4 +1,4 @@
-import { Paragraph, Surface, Title } from "@/components/atoms";
+import { Badge, Paragraph, Surface, Title } from "@/components/atoms";
 import { CardContent, CardImage } from "./card.styles";
 
 export function Card() {
@@ -17,6 +17,7 @@ export function Card() {
           nulla autem qui dolor vel eveniet et provident totam necessitatibus
           nam.
         </Paragraph>
+        <Badge />
       </CardContent>
     </Surface>
   );

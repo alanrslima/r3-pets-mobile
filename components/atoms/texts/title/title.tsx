@@ -1,12 +1,23 @@
 import { ReactNode } from "react";
 import { TitleText } from "./title.styles";
-import { TitleSizes } from "../texts";
+import { ColorProps, FontSizeProps, FontWeightProps } from "@/types";
 
 type TitleProps = {
-  size?: TitleSizes;
+  size?: keyof FontSizeProps;
+  weight?: keyof FontWeightProps;
+  color?: keyof ColorProps;
   children?: ReactNode;
 };
 
-export function Title({ size = "base", children }: TitleProps) {
-  return <TitleText>{children}</TitleText>;
+export function Title({
+  size = "base",
+  weight = "medium",
+  color = "onSurfacePrimary",
+  children,
+}: TitleProps) {
+  return (
+    <TitleText $color={color} $size={size} $weight={weight}>
+      {children}
+    </TitleText>
+  );
 }
